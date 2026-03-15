@@ -1,3 +1,6 @@
 [submodule "rivetbootstrap"]
 	path = rivetbootstrap
 	url = git@github.com:leblanc-lab/rivetbootstrap.git
+[submodule "apprentice"]
+	path = apprentice
+	url = git@github.com:HEPonHPC/apprentice.git
