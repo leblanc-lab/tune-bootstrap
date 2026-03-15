@@ -1,0 +1,3 @@
+[submodule "rivetbootstrap"]
+	path = rivetbootstrap
+	url = git@github.com:leblanc-lab/rivetbootstrap.git
