@@ -1,0 +1,17 @@
+# Observable weights for LEP hadronization tuning (e+e- at 91.2 GeV)
+# Format: /regex/path/to/histogram   weight
+# Paths are matched as regex against the YODA analysis path.
+# Blank lines and lines starting with # are ignored.
+#
+# Parameters under study: StringZ:aLund, StringZ:bLund, StringPT:sigma
+# Primary observable sensitivity:
+#   aLund, bLund -> thrust, heavy-jet mass, C-parameter, jet rates
+#   sigma        -> transverse momentum distributions, jet broadening
+# ALEPH QCD study -- event shapes and jet rates at 91.2 GeV (broadest coverage)
+/ALEPH_1996_I428072   1.0
+# OPAL event shape distributions and moments (91-209 GeV, largest data set)
+/OPAL_2004_I669402    1.0
+# DELPHI MC tuning reference -- event shapes and identified particles
+/DELPHI_1996_I424112  1.0
+# ALEPH charged multiplicity -- overall hadron yield constraint
+/ALEPH_1991_I319520   2.0

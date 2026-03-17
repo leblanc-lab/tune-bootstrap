@@ -1,0 +1,16 @@
+# --- generated run output ---
+logs/
+runs_*/
+
+# --- generated pipeline artefacts ---
+mc_*.hdf5
+approx_*.json
+refdata_*.json
+
+# --- tuning results and plots ---
+results_*/
+plots_*/
+plots*/
+*.pdf
+parameter_space_*.pdf
+sensitivity_*.pdf

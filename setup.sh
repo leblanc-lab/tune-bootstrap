@@ -25,7 +25,13 @@ source "$PREFIX/lhapdfenv.sh"
 ## 5. Pythia8 xmldoc path (needed for pythia8-main* to find Settings/ParticleData)
 export PYTHIA8DATA="$PREFIX/share/Pythia8/xmldoc"
 
-## 6. Apprentice — already on PATH via venv bin/, but make the source tree importable
+## 6. MPI — required by Apprentice (app-yoda2h5, app-build, app-tune2)
+##    Load hpcx-mpi if no MPI library is already in LD_LIBRARY_PATH
+if ! python3 -c "from mpi4py import MPI" 2>/dev/null; then
+    module load hpcx-mpi 2>/dev/null || module load openmpi 2>/dev/null || true
+fi
+
+## 7. Apprentice — already on PATH via venv bin/, but make the source tree importable
 ##    if installed in editable mode (pip install -e)
 if [[ -d "$TUNE_DIR/apprentice" ]]; then
     export PYTHONPATH="$TUNE_DIR/apprentice:$PYTHONPATH"

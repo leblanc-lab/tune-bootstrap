@@ -1,0 +1,8 @@
+# Observable weights for LHC hadronization comparison study (pp at 7 TeV)
+# Format: /regex/path/to/histogram   weight
+#
+# ATLAS event shapes in leptonic Z-events -- direct analogue of LEP event shapes
+# Measures thrust, C-parameter, jet broadening in Z->ll events at 7 TeV.
+# These are sensitive to the same string fragmentation parameters as LEP,
+# but with additional pp context (ISR, UE, colour reconnection, etc.).
+/ATLAS_2016_I1424838  1.0
