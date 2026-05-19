@@ -17,7 +17,7 @@ The three parameters under study are:
 
 ```bash
 ssh <your-username>@ssh.ccv.brown.edu
-cd /users/mleblan6/work/tune_v2
+cd /path/to/tune-bootstrap
 source setup.sh          # activates Python venv + Rivet + LHAPDF + Pythia8
 ```
 
@@ -117,8 +117,8 @@ The `{name}` tokens must match the keys in `params.json` exactly.
 
 ```bash
 interact -n 4 -m 8g -t 2:00:00
-source /users/mleblan6/work/tune_v2/setup.sh
-cd /users/mleblan6/work/tune_v2/tuning_study
+source setup.sh
+cd tuning_study
 ```
 
 ### Step 1 — sample the parameter grid
@@ -135,7 +135,7 @@ This creates `runs_lep/` and `runs_lhc/` with identical parameter points.
 Copy the exact `sbatch` commands printed by Step 1 and run them:
 
 ```bash
-mkdir -p /users/mleblan6/work/tune_v2/tuning_study/logs
+mkdir -p logs
 
 sbatch --array=0-24%20 \
   --output=".../logs/generate_%A_%a.out" \
